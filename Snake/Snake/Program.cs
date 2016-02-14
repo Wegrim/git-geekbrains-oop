@@ -9,16 +9,7 @@ namespace Snake
     class Program
     {
         static void Main(string[] args)
-        {
-            /*Point p1 = new Point(1, 3, '*');
-            p1.Draw();   
-            Point p2 = new Point(4, 5, '#');
-            p2.Draw();
-            Point p3 = new Point(2, 6, '%');
-            p3.Draw();
-            Point p4 = new Point(9, 7, '@');
-            p4.Draw();*/
-
+        {           
             Console.SetWindowSize(80, 25);
             Console.SetBufferSize(80, 25);
             
@@ -30,6 +21,10 @@ namespace Snake
             downLine.Draw();
             leftLine.Draw();
             rightLine.Draw();
+
+            Point p = new Point(4, 5, '*');
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Draw();
 
             Console.ReadLine();
         }
